@@ -10,7 +10,7 @@ namespace tests
         [Fact]
         public void CountShouldControlNumberOfResults()
         {
-            var range = new Range {Count = 3};
+            var range = new Range { Count = 3 };
             var generated = range.Of(() => "");
             Assert.Equal(3, generated.Count());
         }
@@ -23,7 +23,7 @@ namespace tests
             var counter = 0;
             var generated = range.Of(() => values[counter++]);
 
-            Assert.Equal(new[] {"a", "b", "c"}, generated.ToArray());
-        }   
+            Assert.Equal(new[] { "a", "b", "c" }, generated.ToArray());
+        }
     }
 }
