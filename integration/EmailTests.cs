@@ -37,6 +37,7 @@ namespace integration
                 RequestUri = new Uri($"{MailHogApiV2Root}/messages")
             };
             Console.WriteLine($"Checking emails: {checkEmails.RequestUri}");
+            
             using (var response = await client.SendAsync(checkEmails))
             {
                 response.EnsureSuccessStatusCode();
